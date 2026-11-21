@@ -21,7 +21,7 @@ export async function getDepartmentHighlightIds(
   limit = 20,
 ): Promise<number[]> {
   const { data } = await metClient.get<SearchResponse>('/v1.1/search', {
-    params: { departmentId, isHishglight: true, hasImage: true, limit },
+    params: { departmentId, isHighlight: true, hasImage: true, limit },
   });
   return data.objectIDs ?? [];
 }
